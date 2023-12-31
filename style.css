@@ -1,6 +1,7 @@
 :root {
     --dark-gray: #31343d;
     --light-blue: #92CBCD;
+    --dark-blue: #445877;
 }
 
 html, body {
@@ -52,15 +53,25 @@ nav ul li {
 nav ul li a {
     color: var(--light-blue);
     border-bottom: 3px solid var(--light-blue);
+    padding-bottom: 3px;
 }
 
 
 /* IMG W SUBTITLES */
+
+#profile-picture {
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    position: absolute;
+    left: 200px;
+}
+
 #img-and-text{
     height: 300px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("images/img1.png");
+    background-image: url("images/img7.png");
     background-size: cover;
     position: relative;
 }
@@ -72,6 +83,158 @@ nav ul li a {
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 15px 30px;
+    margin: 15px 200px;
     padding: 10px;
+}
+
+/* MAIN */
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* ABOUT */
+
+#AboutMe {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+#AboutMe h2 {
+    width: 10%;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+#AboutMe p {
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    border-left: 3px solid var(--dark-blue);
+    color: var(--dark-blue);
+    padding-left: 50px;
+}
+
+/* WORK */
+
+#Work {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+#Work h2 {
+    width: 10%;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+#Projects-container {
+    width: 90%;
+    border-left: 3px solid var(--dark-blue);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 50px;
+}
+
+#Projects-container .card {
+    width: 100%;
+    padding: 0 5px;
+    position: relative;
+    text-align: center;
+}
+
+
+.card:not(:first-child) {
+    flex-basis: calc(50% - 20px);
+}
+
+#Projects-container .card img {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 5px solid var(--light-blue);
+    opacity: 0.7;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#Projects-container .card .card-text {
+    padding: 20px;
+    color: var(--dark-blue);
+    background-color: var(--light-blue);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 50px;
+    left: 8px;
+}
+
+#Projects-container .card:first-child {
+    width: 99%;
+}
+
+
+
+
+
+
+#Projects-container .card img:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT */
+
+#ContactMe {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+#ContactMe h2 {
+    width: 10%;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+}
+
+.footer-contact{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-left: 3px solid var(--dark-blue);
+}
+
+.footer-contact .Contact {
+    color: var(--dark-blue);
+    border-bottom: 3px solid var(--dark-blue);
+    padding-bottom: 3px;
+    font-weight: bolder;
+}
+
+.footer-contact .Contact a {
+    color: var(--dark-blue);
 }
