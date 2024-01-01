@@ -27,6 +27,7 @@ header h1 {
     padding: 0 10px 0 100px;
     background-color: var(--light-blue);
     color: var(--dark-gray);
+    font-size: 48px;
 }
 
 /* NAV */
@@ -60,18 +61,18 @@ nav ul li a {
 /* IMG W SUBTITLES */
 
 #profile-picture {
-    height: 320px;
-    width: 320px;
+    height: 420px;
+    width: 420px;
     border-radius: 50%;
     position: absolute;
-    left: 200px;
+    left: 150px;
 }
 
 #img-and-text{
-    height: 300px;
+    height: 500px;
     width: 100%;
     margin-bottom: 25px;
-    background-image: url("images/img7.png");
+    background-image: url("/images/img7.png");
     background-size: cover;
     position: relative;
 }
@@ -109,6 +110,7 @@ main {
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
+    text-align: end;
 }
 
 #AboutMe p {
@@ -169,6 +171,7 @@ main {
     transition: opacity 0.5s ease-in-out;
 }
 
+
 #Projects-container .card .card-text {
     padding: 20px;
     color: var(--dark-blue);
@@ -182,25 +185,12 @@ main {
 }
 
 #Projects-container .card:first-child {
-    width: 99%;
+    width: 100%;
 }
-
-
-
-
-
 
 #Projects-container .card img:hover {
     opacity: 1;
 }
-
-
-
-
-
-
-
-
 
 /* CONTACT */
 
@@ -217,6 +207,7 @@ main {
     display: flex;
     justify-content: flex-end;
     margin-right: 25px;
+    text-align: end;
 }
 
 .footer-contact{
@@ -226,6 +217,7 @@ main {
     justify-content: space-around;
     align-items: center;
     border-left: 3px solid var(--dark-blue);
+    padding-left: 50px;
 }
 
 .footer-contact .Contact {
@@ -238,3 +230,151 @@ main {
 .footer-contact .Contact a {
     color: var(--dark-blue);
 }
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    header {
+        height: 120px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header h1 {
+        padding: 10px;
+    }
+
+    nav {
+        margin: 20px 0;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    nav ul li a{
+        flex-direction: row;
+        font-size: 16px;
+    }
+
+    #img-and-text {
+        background-size: contain;
+        height: 400px;
+    }
+
+    #profile-picture {
+        height: 300px;
+        width: 100%;
+        left: 0;
+    }
+
+    #subtitle {
+        justify-content: center;
+        width: 100%;
+        margin: 15px auto;
+    }
+    
+    main {
+        width: 100%;
+    }
+
+    #AboutMe,
+    #Work,
+    #ContactMe {
+        flex-direction: column;
+    }
+
+    #AboutMe h2,
+    #Work h2,
+    #ContactMe h2 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #AboutMe p{
+        border: none;
+    }
+
+    #AboutMe p,
+    #Work,
+    #ContactMe .footer-contact {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    #ContactMe .footer-contact {
+        flex-direction: column;
+        gap: 16px;
+        border: none;
+    }
+
+    #ContactMe .footer-contact .Contact {
+        font-size: 18px;
+    }
+
+    #Projects-container .card {
+        flex-basis: calc(100% - 20px);
+        
+    }
+
+    #Projects-container {
+        border: none;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    header {
+        height: 150px;
+    }
+
+    header h1 {
+        padding: 10px;
+    }
+
+    #img-and-text {
+        height: 200px;
+    }
+
+    #subtitle {
+        margin: 0;
+        padding: 5px;
+        font-size: 24px;
+    }
+
+    #profile-picture {
+        height: 180px;
+        width: 100%;
+        left: 0;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    #AboutMe h2,
+    #Work h2,
+    #ContactMe h2 {
+        font-size: 32px;
+    }
+
+    #AboutMe p,
+    #Work .card,
+    #ContactMe .footer-contact {
+        font-size: 18px;
+    }
+
+    #Projects-container {
+        padding: 10px;
+        justify-content: center; 
+    }
+
+}
+
