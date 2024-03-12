@@ -215,6 +215,36 @@ main {
 }
 
 
+/* RESUME */
+
+#resume {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 25px 0;
+}
+
+#resume h2 {
+    width: 10%;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    text-align: end;
+}
+
+object {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-left: 3px solid var(--dark-blue);
+    padding-left: 50px;
+}
+
+
+
 
 /* CONTACT */
 
@@ -304,12 +334,14 @@ main {
 
     #AboutMe,
     #Work,
+    #resume,
     #ContactMe {
         flex-direction: column;
     }
 
     #AboutMe h2,
     #Work h2,
+    #resume h2,
     #ContactMe h2 {
         width: 100%;
         margin-right: 0;
@@ -324,10 +356,17 @@ main {
 
     #AboutMe p,
     #Work,
+    #resume object,
     #ContactMe .footer-contact {
         width: 100%;
         padding-left: 0;
         text-align: center;
+    }
+
+    #resume object {
+        flex-direction: column;
+        gap: 16px;
+        border: none;
     }
 
     #ContactMe .footer-contact {
@@ -385,12 +424,14 @@ main {
 
     #AboutMe h2,
     #Work h2,
+    #resume h2,
     #ContactMe h2 {
         font-size: 32px;
     }
 
     #AboutMe p,
     #Work .card,
+    #resume object,
     #ContactMe .footer-contact {
         font-size: 18px;
     }
